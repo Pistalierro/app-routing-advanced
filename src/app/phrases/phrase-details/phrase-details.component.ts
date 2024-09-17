@@ -2,11 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {PhrasesService} from '../../shared/phrases.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Phrase} from '../../shared/phrase';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-phrase-details',
   standalone: true,
-  imports: [],
+  imports: [
+    NgIf
+  ],
   templateUrl: './phrase-details.component.html',
   styleUrl: './phrase-details.component.scss'
 })

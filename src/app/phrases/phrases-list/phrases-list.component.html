@@ -1,6 +1,6 @@
+<h3>Phrases List</h3>
 <div class="phrases__container">
   <ul class="phrases__list">
-    <h3>Phrases List</h3>
     <li (click)="onSelect(phrase)"
         *ngFor="let phrase of phrases"
         [class.selected]="isSelected(phrase)">
