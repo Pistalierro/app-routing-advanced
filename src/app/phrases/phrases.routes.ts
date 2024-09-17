@@ -12,7 +12,7 @@ export const phrasesRoutes: Routes = [
         path: '',
         component: PhrasesListComponent,
         children: [
-          {path: '', component: PhraseDetailsComponent},
+          {path: ':id', component: PhraseDetailsComponent},
         ]
       }
     ]

@@ -1,1 +1,14 @@
-<p>phrases-list works!</p>
+<div class="phrases__container">
+  <ul class="phrases__list">
+    <h3>Phrases List</h3>
+    <li (click)="onSelect(phrase)"
+        *ngFor="let phrase of phrases"
+        [class.selected]="isSelected(phrase)">
+      {{ phrase.value }}
+    </li>
+  </ul>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
