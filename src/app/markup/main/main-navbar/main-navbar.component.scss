@@ -1,0 +1,15 @@
+@use "../../../../assets/scss/mixins/mixins" as *;
+@use "../../../../assets/scss/presets/veribles" as *;
+
+.navbar {
+  &__title {
+    margin-bottom: $gap;
+  }
+
+  &__list {
+    @include unlist;
+    display: flex;
+    gap: $gap;
+    flex-direction: column;
+  }
+}
