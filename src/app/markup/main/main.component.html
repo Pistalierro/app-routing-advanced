@@ -1,15 +1,8 @@
 <main class="main">
   <div class="main__container">
-    <div class="main__navbar-block">
-      <h2 class="main__navbar-title">App Menu</h2>
-      <nav class="main__navbar">
-        <ul class="main__navbar-list">
-          <li class="main__navbar-item">
-            <a class="main__navbar-link" routerLink="/home" routerLinkActive="active">Home</a>
-          </li>
-        </ul>
-      </nav>
+    <app-main-navbar></app-main-navbar>
+    <div>
+      <router-outlet></router-outlet>
     </div>
-    <div class="main__content"></div>
   </div>
 </main>

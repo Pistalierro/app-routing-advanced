@@ -12,4 +12,6 @@ import {NgOptimizedImage} from '@angular/common';
 })
 export class HeaderComponent {
 
+  title: string = 'App Advanced Routing';
+
 }
