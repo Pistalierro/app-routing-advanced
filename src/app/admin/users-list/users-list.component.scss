@@ -1,0 +1,14 @@
+@use "../../../assets/scss/presets/veribles" as *;
+
+
+li {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.users__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+
+}

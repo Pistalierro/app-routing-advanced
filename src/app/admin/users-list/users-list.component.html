@@ -1,0 +1,14 @@
+<h3>Manage Users Here</h3>
+<div class="users__container">
+  <ol>
+    <li (click)="onSelect(user)"
+        *ngFor="let user of users">
+      {{ user.name }}
+    </li>
+  </ol>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

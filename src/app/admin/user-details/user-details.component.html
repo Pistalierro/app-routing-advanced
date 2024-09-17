@@ -1,0 +1,19 @@
+<div *ngIf="user; then thenBlock; else elseBlock"></div>
+
+
+<ng-template #thenBlock>
+  <h3>User Details</h3>
+
+  <div>ID: {{ user?.id }}</div>
+  <div>Name: {{ user?.name }}</div>
+  <div>Role: {{ user?.role }}</div>
+</ng-template>
+
+
+<ng-template #elseBlock>
+  <h4>User Not Found</h4>
+</ng-template>
+
+<div class="btn__group">
+  <button (click)="goToUsersList()" type="button">Go To Users List</button>
+</div>

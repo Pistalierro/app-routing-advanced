@@ -1,0 +1,14 @@
+@use "../../../assets/scss/mixins/mixins" as *;
+@use "../../../assets/scss/presets/veribles" as *;
+@use "../../../assets/scss/presets/skins" as *;
+
+ul {
+  @include unlist;
+  display: flex;
+  gap: $gap;
+
+  li a {
+    display: block;
+    min-width: 150px;
+  }
+}
