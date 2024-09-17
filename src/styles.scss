@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@use "assets/libs/normalize-scss-8.0.0/sass/normalize/import-now";
+
+@use "assets/scss/presets";
+@use "assets/scss/mixins";
+@use "assets/scss/extends";
+
+@use "assets/scss/base";
+@use "assets/scss/components";
+
+
+
+
