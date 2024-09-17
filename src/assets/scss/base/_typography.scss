@@ -1,0 +1,39 @@
+@use "../presets/veribles" as *;
+@use "../presets/skins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-header;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $color-dark;
+  display: block;
+  padding: 5px $gap-sm;
+  border: 2px solid $color-gray;
+  max-width: $gap * 6;
+  text-align: center;
+  border-radius: $gap * 0.4;
+  font-weight: 600;
+  transition: all .25s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-gray;
+    color: $color-light;
+  }
+}
+
+p {
+  text-align: justify;
+}
