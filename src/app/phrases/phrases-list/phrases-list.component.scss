@@ -22,13 +22,13 @@
 
       &:hover {
         padding-left: $gap;
-        background-color: $color-gray-light;
+        background-color: $color-gray-dark;
         color: $color-light;
         font-weight: bold;
       }
 
       &.selected {
-        padding-left: $gap;
+        padding-left: $gap-sm;
         background-color: $color-gray;
         color: $color-light;
       }
