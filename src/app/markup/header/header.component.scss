@@ -1,0 +1,45 @@
+@use "../../../assets/scss/extends/extend" as *;
+@use "../../../assets/scss/presets/veribles" as *;
+@use "../../../assets/scss/presets/skins" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  background-image: url(../../../assets/img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__container {
+    @extend %container;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: $gap;
+  }
+
+  &__logo {
+    min-width: 100px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../assets/img/angular-icon-logo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  &__title {
+    padding-left: $gap * 2;
+    color: $color-gray-light
+  }
+}
