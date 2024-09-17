@@ -5,19 +5,29 @@
 
 .btn__group {
   margin: 20px 0;
+}
 
-  button {
-    background-color: inherit;
-    border-radius: $gap-sm * 0.5;
-    border: 1px solid $color-gray;
-    transition: all 0.3s;
-    padding: ($gap-sm * .5) $gap-sm;
-    @include box-shadow;
 
-    &:hover {
-      background-color: $color-gray;
-      color: $color-light;
-    }
+button {
+  background-color: inherit;
+  border-radius: $gap-sm * 0.5;
+  border: 1px solid $color-gray;
+  transition: all 0.3s;
+  padding: ($gap-sm * .5) $gap-sm;
+  @include box-shadow;
+
+  &:hover {
+    background-color: $color-gray;
+    color: $color-light;
+  }
+}
+
+.inline__btn {
+  display: inline-block;
+  margin-right: 1em;
+
+  + .btn__group {
+    display: inline-block;
   }
 }
 

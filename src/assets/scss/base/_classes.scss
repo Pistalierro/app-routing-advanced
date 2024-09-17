@@ -1,1 +1,38 @@
+@use "../presets/veribles" as *;
+@use "../presets/skins" as *;
+@use "../mixins/mixins" as *;
 
+
+.phrases {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap;
+  }
+
+  &__list {
+    @include unlist;
+
+    li {
+      margin: $gap-sm 0;
+      cursor: pointer;
+      border-radius: $gap-sm * 0.5;
+      max-width: 200px;
+      transition: all 0.3s;
+      display: block;
+
+      &:hover {
+        padding-left: $gap;
+        background-color: $color-gray-dark;
+        color: $color-light;
+        font-weight: bold;
+      }
+
+      &.selected {
+        padding-left: $gap-sm;
+        background-color: $color-gray;
+        color: $color-light;
+      }
+    }
+  }
+}

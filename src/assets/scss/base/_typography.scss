@@ -14,12 +14,12 @@ body {
 h1, h2, h3, h4 {
   font-family: $font-header;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h2 {
   margin-bottom: 20px;
-  
+
 }
 
 a {
@@ -38,6 +38,12 @@ a {
   &:hover,
   &:focus {
     background-color: $color-gray;
+    color: $color-light;
+  }
+
+  &.active {
+    border-color: lighten($color-dark, 25%);
+    background-color: lighten($color-dark, 25%);
     color: $color-light;
   }
 }
