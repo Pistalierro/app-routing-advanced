@@ -1,5 +1,6 @@
 @use "../presets/veribles" as *;
 @use "../presets/skins" as *;
+@use "../mixins/mixins" as *;
 
 * {
   box-sizing: border-box;
@@ -20,12 +21,13 @@ a {
   color: $color-dark;
   display: block;
   padding: 5px $gap-sm;
-  border: 2px solid $color-gray;
+  border: 1px solid $color-gray;
   max-width: $gap * 6;
   text-align: center;
   border-radius: $gap * 0.4;
   font-weight: 600;
   transition: all .25s;
+  @include box-shadow;
 
   &:hover,
   &:focus {

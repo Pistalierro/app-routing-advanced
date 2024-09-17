@@ -1,0 +1,7 @@
+@use "../../../assets/scss/mixins/mixins" as *;
+@use "../../../assets/scss/presets/veribles" as *;
+@use "../../../assets/scss/presets/skins" as *;
+
+h3 {
+  margin-bottom: $gap-sm;
+}

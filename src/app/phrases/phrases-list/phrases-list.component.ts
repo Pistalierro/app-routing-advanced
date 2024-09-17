@@ -31,7 +31,8 @@ export class PhrasesListComponent implements OnInit {
 
         this.phrasesService.getAllPhrases()
           .then(phrases => this.phrases = phrases);
-      }
+      },
+      error: err => console.error(err)
     });
   }
 

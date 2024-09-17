@@ -10,7 +10,7 @@
   }
 
   &__list {
-    @include unlist($gap 0 0 0);
+    @include unlist;
 
     li {
       margin: $gap-sm 0;
@@ -22,9 +22,15 @@
 
       &:hover {
         padding-left: $gap;
-        background-color: $color-gray;
+        background-color: $color-gray-light;
         color: $color-light;
         font-weight: bold;
+      }
+
+      &.selected {
+        padding-left: $gap;
+        background-color: $color-gray;
+        color: $color-light;
       }
     }
   }
