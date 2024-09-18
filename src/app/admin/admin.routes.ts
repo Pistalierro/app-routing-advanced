@@ -6,6 +6,7 @@ import {UsersListComponent} from './users-list/users-list.component';
 import {UserDetailsComponent} from './user-details/user-details.component';
 import {EditPhraseDetailsComponent} from '../edit-phrases/edit-phrase-details/edit-phrase-details.component';
 import {canDeactivateGuard} from '../shared/can-deactivate.guard';
+import {phraseDetailsResolver} from '../shared/phrase-details.resolver';
 
 export const adminRoutes: Routes = [
   {
@@ -22,6 +23,9 @@ export const adminRoutes: Routes = [
             path: ':id',
             component: EditPhraseDetailsComponent,
             canDeactivate: [canDeactivateGuard],
+            resolve: {
+              phrase: phraseDetailsResolver
+            }
           },
         ]
       },

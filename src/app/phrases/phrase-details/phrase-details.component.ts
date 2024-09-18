@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PhrasesService} from '../../shared/phrases.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, Data, Router} from '@angular/router';
 import {Phrase} from '../../shared/phrase';
 import {NgIf} from '@angular/common';
 
@@ -15,21 +14,16 @@ import {NgIf} from '@angular/common';
 })
 export class PhraseDetailsComponent implements OnInit {
 
-  phrase?: Phrase;
+  phrase!: Phrase;
 
-  constructor(private phrasesService: PhrasesService,
-              private activatedRoute: ActivatedRoute,
+  constructor(private activatedRoute: ActivatedRoute,
               private router: Router) {
   }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe({
-      next: params => {
-        const id = +params['id'];
-        if (isNaN(id)) return;
-
-        this.phrasesService.getPhrase(id)
-          .then(phrase => this.phrase = phrase);
+    this.activatedRoute.data.subscribe({
+      next: (data: Data) => {
+        this.phrase = data['phrase'];
       },
       error: err => console.error(err)
     });
