@@ -3,7 +3,7 @@
   <ol>
     <li (click)="onSelect(user)"
         *ngFor="let user of users">
-      {{ user.name }}
+      {{ user.name }} ({{ user.role }})
     </li>
   </ol>
 

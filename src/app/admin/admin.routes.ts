@@ -5,6 +5,7 @@ import {EditPhrasesListComponent} from '../edit-phrases/edit-phrases-list/edit-p
 import {UsersListComponent} from './users-list/users-list.component';
 import {UserDetailsComponent} from './user-details/user-details.component';
 import {EditPhraseDetailsComponent} from '../edit-phrases/edit-phrase-details/edit-phrase-details.component';
+import {canDeactivateGuard} from '../shared/can-deactivate.guard';
 
 export const adminRoutes: Routes = [
   {
@@ -14,15 +15,24 @@ export const adminRoutes: Routes = [
     children: [
       {path: '', redirectTo: 'phrases', pathMatch: 'full'},
       {
-        path: 'phrases', component: EditPhrasesListComponent,
+        path: 'phrases',
+        component: EditPhrasesListComponent,
         children: [
-          {path: ':id', component: EditPhraseDetailsComponent},
+          {
+            path: ':id',
+            component: EditPhraseDetailsComponent,
+            canDeactivate: [canDeactivateGuard],
+          },
         ]
       },
       {
         path: 'users', component: UsersListComponent,
         children: [
-          {path: ':id', component: UserDetailsComponent},
+          {
+            path: ':id',
+            component: UserDetailsComponent,
+            canDeactivate: [canDeactivateGuard],
+          },
         ]
       },
     ]

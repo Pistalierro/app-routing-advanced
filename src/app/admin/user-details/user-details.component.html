@@ -1,18 +1,12 @@
-<div *ngIf="user; then thenBlock; else elseBlock"></div>
+<h3>User Details</h3>
 
+<div>ID: {{ user?.id }}</div>
+<div><label><input [(ngModel)]="editName" type="text"></label></div>
+<div><label><input [(ngModel)]="editRole" type="text"></label></div>
 
-<ng-template #thenBlock>
-  <h3>User Details</h3>
-
-  <div>ID: {{ user?.id }}</div>
-  <div>Name: {{ user?.name }}</div>
-  <div>Role: {{ user?.role }}</div>
-</ng-template>
-
-
-<ng-template #elseBlock>
-  <h4>User Not Found</h4>
-</ng-template>
+<div (click)="save()" *ngIf="isChanged()" class="inline__btn">
+  <button type="button">Save</button>
+</div>
 
 <div class="btn__group">
   <button (click)="goToUsersList()" type="button">Go To Users List</button>
