@@ -1,0 +1,16 @@
+<h3>Manage Phrases Here</h3>
+<p>Выберите фразу для редактирования:</p>
+
+<div class="phrases__container">
+  <ul class="phrases__list">
+    <li (click)="onSelect(phrase)"
+        *ngFor="let phrase of phrases"
+        [class.selected]="isSelected(phrase)">
+      {{ phrase.value }} ({{ phrase.language }})
+    </li>
+  </ul>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

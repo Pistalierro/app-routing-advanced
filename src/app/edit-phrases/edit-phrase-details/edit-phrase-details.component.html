@@ -1,0 +1,14 @@
+<h3>Edit Phrase</h3>
+
+<div>ID: {{ phrase.id }}</div>
+<div><label>Value:<input [(ngModel)]="editValue" type="text"></label></div>
+<div><label>Language:<input [(ngModel)]="editLanguage" type="text"></label></div>
+
+
+<div *ngIf="isChanged()" class="inline__btn">
+  <button (click)="save()" type="button">Save</button>
+</div>
+
+<div class="btn__group">
+  <button (click)="goToPhrasesList()" type="button">Go To Phrases List</button>
+</div>

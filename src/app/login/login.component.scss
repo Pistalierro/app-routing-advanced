@@ -1,0 +1,16 @@
+@use "../../assets/scss/presets/veribles" as *;
+@use "../../assets/scss/mixins/mixins" as *;
+
+label {
+  display: block;
+  margin-bottom: $gap-sm;
+}
+
+input {
+  display: block;
+  margin-top: $gap-sm * 0.5;
+  border-radius: 7px;
+  border-width: 1px;
+  padding: 5px 10px;
+  @include box-shadow;
+}
